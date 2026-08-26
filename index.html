@@ -95,7 +95,7 @@
 
                             <h4>What I Learned</h4>
                             <p>
-                                Explain one challenge you faced, how you solved it, and what you learned from the process.
+                                One of the biggest challenges I faced was a bug where every exit in the game reported as blocked, even in rooms that should have been open. I traced it back by checking each function one at a time until I found the cause: a constructor in my Room class never initialized a boolean member, so it picked up garbage memory instead of defaulting to false. It taught me that debugging is really about methodically ruling things out, and now I make sure every constructor initializes every member, not just the one I happened to be testing with.
                             </p>
 
                             <div class="project-links">
